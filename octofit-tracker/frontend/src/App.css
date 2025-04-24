@@ -1,0 +1,110 @@
+body {
+  background-color: #f0f8ff; /* Light blue */
+  color: #333; /* Dark text for contrast */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style navigation menu */
+nav {
+  background-color: #4682b4; /* Steel blue */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #f0f8ff; /* Light blue */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcccb; /* Light coral */
+  text-decoration: underline;
+}
+
+/* Style headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00008b; /* Dark blue */
+}
+
+/* Style tables */
+table {
+  width: 90%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+  font-size: 1.2rem;
+}
+
+table tr:nth-child(even) {
+  background-color: #f0f8ff; /* Light blue */
+}
+
+table tr:hover {
+  background-color: #e0ffff; /* Light cyan */
+}
+
+/* Style buttons */
+button {
+  background-color: #4682b4; /* Steel blue */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5a9bd4; /* Lighter steel blue */
+}
+
+/* Add logo styling */
+.App-logo {
+  height: 60px;
+  margin-right: 1rem;
+  float: left;
+}
+
+/* Add favicon styling */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
