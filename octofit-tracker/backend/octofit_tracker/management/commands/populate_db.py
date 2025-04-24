@@ -28,13 +28,17 @@ class Command(BaseCommand):
             User(_id=ObjectId(), username='crashoverride', email='crashoverride@hmhigh.edu', password='crashoverridepassword'),
             User(_id=ObjectId(), username='sleeptoken', email='sleeptoken@mhigh.edu', password='sleeptokenpassword'),
         ]
+        print("Creating users...")
         User.objects.bulk_create(users)
+        print("Users created:", User.objects.all())
 
         # Create teams
+        print("Creating teams...")
         team = Team(_id=ObjectId(), name='Blue Team')
         team.save()
         for user in users:
             team.members.add(user)
+        print("Teams created:", Team.objects.all())
 
         # Create activities
         activities = [
@@ -44,7 +48,9 @@ class Command(BaseCommand):
             Activity(_id=ObjectId(), user=users[3], activity_type='Strength', duration=timedelta(minutes=30)),
             Activity(_id=ObjectId(), user=users[4], activity_type='Swimming', duration=timedelta(hours=1, minutes=15)),
         ]
+        print("Creating activities...")
         Activity.objects.bulk_create(activities)
+        print("Activities created:", Activity.objects.all())
 
         # Create leaderboard entries
         leaderboard_entries = [
@@ -54,7 +60,9 @@ class Command(BaseCommand):
             Leaderboard(_id=ObjectId(), user=users[3], score=85),
             Leaderboard(_id=ObjectId(), user=users[4], score=80),
         ]
+        print("Creating leaderboard entries...")
         Leaderboard.objects.bulk_create(leaderboard_entries)
+        print("Leaderboard entries created:", Leaderboard.objects.all())
 
         # Create workouts
         workouts = [
@@ -64,6 +72,8 @@ class Command(BaseCommand):
             Workout(_id=ObjectId(), name='Strength Training', description='Training for strength'),
             Workout(_id=ObjectId(), name='Swimming Training', description='Training for a swimming competition'),
         ]
+        print("Creating workouts...")
         Workout.objects.bulk_create(workouts)
+        print("Workouts created:", Workout.objects.all())
 
         self.stdout.write(self.style.SUCCESS('Successfully populated the database with test data.'))
