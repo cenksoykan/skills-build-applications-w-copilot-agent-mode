@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-car)ym2jbf=!m0aamwh%(+5vsax7na3y^-y49722fg(w^%tf(2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'miniature-invention-grv6xxgrwcvr66-8000.app.github.dev']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
